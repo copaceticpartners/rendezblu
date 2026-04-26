@@ -821,3 +821,19 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 480px) {
   .cats-grid { grid-template-columns: 1fr; }
 }
+
+/* HERO TEXT GLASS EFFECT */
+.hero-h1-big {
+  text-shadow:
+    0 0 40px rgba(13,33,55,0.8),
+    0 2px 20px rgba(13,33,55,0.9),
+    0 0 80px rgba(13,33,55,0.5);
+}
+
+.hero-h1-small {
+  text-shadow: 0 1px 12px rgba(13,33,55,0.9);
+}
+
+.hero-sub {
+  text-shadow: 0 1px 8px rgba(13,33,55,0.8);
+}
