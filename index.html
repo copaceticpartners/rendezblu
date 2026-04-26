@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RendezBlu — Where Blu Meets Blu</title>
   <meta name="description" content="Gear guides, water spots, and everything you need for an ocean and lake active lifestyle." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,118 +24,162 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-left">
-      <div class="tagline">
-        <span class="tagline-line1">rendezvous where</span>
-        <div class="tagline-line2">
-          <span class="tagline-blu">blu</span><span class="tagline-meets">meets</span><span class="tagline-blu tagline-blu2">blu</span>
-        </div>
+  <section class="hero-video">
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline class="hero-vid">
+        <source src="https://videos.pexels.com/video-files/7426170/7426170-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/7426206/7426206-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        Ocean · Lake · Shore · Movement
       </div>
-      <p class="hero-sub">You live near the water for a reason. We make sure you're geared up for it.</p>
+      <h1 class="hero-h1">
+        <span class="hero-h1-small">rendezvous where</span>
+        <span class="hero-h1-big"><span class="blu1">BLU</span> <span class="meets">meets</span> <span class="blu2">BLU</span></span>
+      </h1>
+      <p class="hero-sub">You live near the water for a reason.<br/>We make sure you're geared up for it.</p>
       <div class="hero-actions">
-        <a href="/gear.html" class="btn-main">Explore gear</a>
-        <a href="/guides.html" class="btn-sec">Read guides</a>
+        <a href="/guides/best-inflatable-paddleboards-under-500.html" class="btn-primary">Explore gear</a>
+        <a href="/guides.html" class="btn-ghost">Read guides</a>
       </div>
     </div>
-    <div class="hero-right">
-      <div class="hero-card-big">
-        <div class="hero-card-label">// trending now</div>
-        <div class="hero-card-h">Best inflatable SUPs under $500 for beginners</div>
-        <div class="hero-card-sub">Updated for 2026 · 8 min read</div>
-        <div class="hero-card-num">01</div>
+    <div class="hero-scroll">Scroll to explore ↓</div>
+  </section>
+
+  <div class="tagline-bar">
+    <div class="tagline-bar-inner">
+      <span>Paddleboards</span><span class="sep">·</span>
+      <span>Beach fitness</span><span class="sep">·</span>
+      <span>Waterproof gear</span><span class="sep">·</span>
+      <span>SUP yoga</span><span class="sep">·</span>
+      <span>Lake life</span><span class="sep">·</span>
+      <span>Coastal running</span><span class="sep">·</span>
+      <span>Ocean training</span><span class="sep">·</span>
+      <span>Surf fitness</span>
+    </div>
+  </div>
+
+  <section class="intro-section">
+    <div class="intro-inner">
+      <div class="intro-text">
+        <div class="section-label">// why rendezblu</div>
+        <h2 class="intro-h">Gear guides written by people<br/>who actually get wet.</h2>
+        <p class="intro-body">No fake reviews. No sponsored garbage. Just honest breakdowns of the best water gear — tested by people who'd rather be on the water than writing about it. (But here we are.)</p>
       </div>
-      <div class="hero-cards-sm">
-        <div class="hero-card-sm">
-          <div class="hero-card-sm-num">200+</div>
-          <div class="hero-card-sm-label">Gear reviews</div>
+      <div class="intro-stats">
+        <div class="stat-card">
+          <div class="stat-n">200+</div>
+          <div class="stat-l">Gear reviews</div>
         </div>
-        <div class="hero-card-sm">
-          <div class="hero-card-sm-num">40+</div>
-          <div class="hero-card-sm-label">Water spots mapped</div>
+        <div class="stat-card">
+          <div class="stat-n">40+</div>
+          <div class="stat-l">Water spots</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-n">0</div>
+          <div class="stat-l">Excuses to stay dry</div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-wrap">
-    <div class="section">
-      <div class="section-top">
-        <div>
-          <div class="section-eyebrow">// gear categories</div>
-          <div class="section-h">What are we feeling?</div>
-        </div>
-        <a href="/gear.html" class="section-link">View all →</a>
+  <section class="image-grid-section">
+    <div class="image-grid">
+      <div class="img-cell img-tall" style="background-image: url('https://images.pexels.com/photos/1295036/pexels-photo-1295036.jpeg?auto=compress&cs=tinysrgb&w=800')">
+        <div class="img-label">Paddleboards & SUP</div>
       </div>
-      <div class="cats">
-        <a href="/gear/paddleboards.html" class="cat">
-          <div class="cat-num">01</div>
-          <div class="cat-title">Paddleboards & SUP</div>
-          <div class="cat-desc">Inflatable, hardboard, and hybrid for any water</div>
+      <div class="img-cell-stack">
+        <div class="img-cell" style="background-image: url('https://images.pexels.com/photos/1654485/pexels-photo-1654485.jpeg?auto=compress&cs=tinysrgb&w=600')">
+          <div class="img-label">Beach fitness</div>
+        </div>
+        <div class="img-cell" style="background-image: url('https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=600')">
+          <div class="img-label">Ocean lifestyle</div>
+        </div>
+      </div>
+      <div class="img-cell img-tall" style="background-image: url('https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=800')">
+        <div class="img-label">Water sports</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-top">
+      <div>
+        <div class="section-label">// gear categories</div>
+        <h2 class="section-h">What are we feeling?</h2>
+      </div>
+      <a href="/gear.html" class="section-link">View all →</a>
+    </div>
+    <div class="cats">
+      <a href="/gear/paddleboards.html" class="cat">
+        <div class="cat-num">01</div>
+        <div class="cat-title">Paddleboards & SUP</div>
+        <div class="cat-desc">Inflatable, hardboard, and hybrid for any water</div>
+      </a>
+      <a href="/gear/beach-workout.html" class="cat">
+        <div class="cat-num">02</div>
+        <div class="cat-title">Beach workout gear</div>
+        <div class="cat-desc">Resistance bands, sandbags, portable training</div>
+      </a>
+      <a href="/gear/waterproof.html" class="cat">
+        <div class="cat-num">03</div>
+        <div class="cat-title">Waterproof essentials</div>
+        <div class="cat-desc">Dry bags, cases, and gear built for wet</div>
+      </a>
+      <a href="/gear/tech.html" class="cat">
+        <div class="cat-num">04</div>
+        <div class="cat-title">Ocean fitness tech</div>
+        <div class="cat-desc">Waterproof trackers, dive watches, GPS</div>
+      </a>
+      <a href="/gear/sun.html" class="cat">
+        <div class="cat-num">05</div>
+        <div class="cat-title">Sun protection</div>
+        <div class="cat-desc">Reef-safe sunscreen, rash guards, UV gear</div>
+      </a>
+      <a href="/gear/carry.html" class="cat">
+        <div class="cat-num">06</div>
+        <div class="cat-title">Carry & transport</div>
+        <div class="cat-desc">Roof racks, board bags, carts, coolers</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-top">
+      <div>
+        <div class="section-label">// latest guides</div>
+        <h2 class="section-h">Fresh from the shore.</h2>
+      </div>
+      <a href="/guides.html" class="section-link">All guides →</a>
+    </div>
+    <div class="guides">
+      <a href="/guides/best-inflatable-paddleboards-under-500.html" class="guide-main">
+        <div class="guide-stripe"></div>
+        <span class="guide-tag">// buyer's guide</span>
+        <div class="guide-h">Best inflatable paddleboards under $500 for beginners in 2026</div>
+        <div class="guide-meta">SUP · 8 min · Updated April 2026</div>
+        <div class="guide-link">Read guide →</div>
+      </a>
+      <div class="guide-stack">
+        <a href="/guides/beach-gym-setup-under-200.html" class="guide-sm">
+          <div class="guide-sm-tag">// beach fitness</div>
+          <div class="guide-sm-h">Complete beach gym setup under $200</div>
+          <div class="guide-sm-meta">Gear list · 5 min</div>
         </a>
-        <a href="/gear/beach-workout.html" class="cat">
-          <div class="cat-num">02</div>
-          <div class="cat-title">Beach workout gear</div>
-          <div class="cat-desc">Resistance bands, sandbags, portable training</div>
-        </a>
-        <a href="/gear/waterproof.html" class="cat">
-          <div class="cat-num">03</div>
-          <div class="cat-title">Waterproof essentials</div>
-          <div class="cat-desc">Dry bags, cases, and gear built for wet</div>
-        </a>
-        <a href="/gear/tech.html" class="cat">
-          <div class="cat-num">04</div>
-          <div class="cat-title">Ocean fitness tech</div>
-          <div class="cat-desc">Waterproof trackers, dive watches, GPS</div>
-        </a>
-        <a href="/gear/sun.html" class="cat">
-          <div class="cat-num">05</div>
-          <div class="cat-title">Sun protection</div>
-          <div class="cat-desc">Reef-safe sunscreen, rash guards, UV gear</div>
-        </a>
-        <a href="/gear/carry.html" class="cat">
-          <div class="cat-num">06</div>
-          <div class="cat-title">Carry & transport</div>
-          <div class="cat-desc">Roof racks, board bags, carts, coolers</div>
+        <a href="/guides/best-waterproof-fitness-trackers.html" class="guide-sm">
+          <div class="guide-sm-tag">// tech</div>
+          <div class="guide-sm-h">Best waterproof fitness trackers for ocean workouts</div>
+          <div class="guide-sm-meta">Reviews · 6 min</div>
         </a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section-wrap">
-    <div class="section">
-      <div class="section-top">
-        <div>
-          <div class="section-eyebrow">// latest guides</div>
-          <div class="section-h">Fresh from the shore.</div>
-        </div>
-        <a href="/guides.html" class="section-link">All guides →</a>
-      </div>
-      <div class="guides">
-        <a href="/guides/best-inflatable-paddleboards-under-500.html" class="guide-main">
-          <div class="guide-stripe"></div>
-          <span class="guide-tag">// buyer's guide</span>
-          <div class="guide-h">Best inflatable paddleboards under $500 for beginners in 2026</div>
-          <div class="guide-meta">SUP · 8 min · Updated April 2026</div>
-          <div class="guide-link">Read guide →</div>
-        </a>
-        <div class="guide-stack">
-          <a href="/guides/beach-gym-setup-under-200.html" class="guide-sm">
-            <div class="guide-sm-tag">// beach fitness</div>
-            <div class="guide-sm-h">Complete beach gym setup under $200</div>
-            <div class="guide-sm-meta">Gear list · 5 min</div>
-          </a>
-          <a href="/guides/best-waterproof-fitness-trackers.html" class="guide-sm">
-            <div class="guide-sm-tag">// tech</div>
-            <div class="guide-sm-h">Best waterproof fitness trackers for ocean workouts</div>
-            <div class="guide-sm-meta">Reviews · 6 min</div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="cta-wrap">
+  <section class="cta-wrap container">
     <div class="cta">
       <div>
         <div class="cta-h">Ready to gear up?</div>
@@ -140,18 +187,13 @@
       </div>
       <a href="/gear.html" class="cta-btn">Browse all gear</a>
     </div>
-  </div>
+  </section>
 
   <footer class="footer-wrap">
-    <div class="footer">
+    <div class="footer container">
       <div class="footer-left">
         <div class="footer-logo">Rendez<span class="footer-logo-blu">Blu</span></div>
-        <div class="footer-tagline">
-          <span class="footer-where">where</span>
-          <span class="footer-blu1">blu</span>
-          <span class="footer-meets">meets</span>
-          <span class="footer-blu2">blu.</span>
-        </div>
+        <div class="footer-tagline">where blu meets blu.</div>
       </div>
       <div class="footer-right">© 2026 RendezBlu</div>
     </div>
