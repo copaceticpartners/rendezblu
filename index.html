@@ -24,14 +24,15 @@
     </nav>
   </header>
 
+  <!-- HERO SLIDESHOW -->
   <section class="hero-video">
-    <div class="hero-video-bg">
-      <video autoplay muted loop playsinline class="hero-vid">
-        <source src="https://videos.pexels.com/video-files/7426170/7426170-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-        <source src="https://videos.pexels.com/video-files/7426206/7426206-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-overlay"></div>
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image: url('https://images.pexels.com/photos/1295036/pexels-photo-1295036.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+      <div class="hero-slide" style="background-image: url('https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+      <div class="hero-slide" style="background-image: url('https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+      <div class="hero-slide" style="background-image: url('https://images.pexels.com/photos/1430672/pexels-photo-1430672.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
     </div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-dot"></span>
@@ -50,6 +51,7 @@
     <div class="hero-scroll">Scroll to explore ↓</div>
   </section>
 
+  <!-- TAGLINE BAR -->
   <div class="tagline-bar">
     <div class="tagline-bar-inner">
       <span>Paddleboards</span><span class="sep">·</span>
@@ -63,6 +65,7 @@
     </div>
   </div>
 
+  <!-- INTRO -->
   <section class="intro-section">
     <div class="intro-inner">
       <div class="intro-text">
@@ -87,25 +90,7 @@
     </div>
   </section>
 
-  <section class="image-grid-section">
-    <div class="image-grid">
-      <div class="img-cell img-tall" style="background-image: url('https://images.pexels.com/photos/1295036/pexels-photo-1295036.jpeg?auto=compress&cs=tinysrgb&w=800')">
-        <div class="img-label">Paddleboards & SUP</div>
-      </div>
-      <div class="img-cell-stack">
-        <div class="img-cell" style="background-image: url('https://images.pexels.com/photos/1654485/pexels-photo-1654485.jpeg?auto=compress&cs=tinysrgb&w=600')">
-          <div class="img-label">Beach fitness</div>
-        </div>
-        <div class="img-cell" style="background-image: url('https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=600')">
-          <div class="img-label">Ocean lifestyle</div>
-        </div>
-      </div>
-      <div class="img-cell img-tall" style="background-image: url('https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=800')">
-        <div class="img-label">Water sports</div>
-      </div>
-    </div>
-  </section>
-
+  <!-- CATEGORIES WITH IMAGES -->
   <section class="section container">
     <div class="section-top">
       <div>
@@ -114,40 +99,59 @@
       </div>
       <a href="/gear.html" class="section-link">View all →</a>
     </div>
-    <div class="cats">
-      <a href="/gear/paddleboards.html" class="cat">
-        <div class="cat-num">01</div>
-        <div class="cat-title">Paddleboards & SUP</div>
-        <div class="cat-desc">Inflatable, hardboard, and hybrid for any water</div>
+    <div class="cats-grid">
+      <a href="/gear/paddleboards.html" class="cat-img-card" style="background-image: url('https://images.pexels.com/photos/1295036/pexels-photo-1295036.jpeg?auto=compress&cs=tinysrgb&w=600')">
+        <div class="cat-img-overlay"></div>
+        <div class="cat-img-content">
+          <div class="cat-img-num">01</div>
+          <div class="cat-img-title">Paddleboards & SUP</div>
+          <div class="cat-img-desc">Inflatable, hardboard, and hybrid for any water</div>
+        </div>
       </a>
-      <a href="/gear/beach-workout.html" class="cat">
-        <div class="cat-num">02</div>
-        <div class="cat-title">Beach workout gear</div>
-        <div class="cat-desc">Resistance bands, sandbags, portable training</div>
+      <a href="/gear/beach-workout.html" class="cat-img-card" style="background-image: url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=600')">
+        <div class="cat-img-overlay"></div>
+        <div class="cat-img-content">
+          <div class="cat-img-num">02</div>
+          <div class="cat-img-title">Beach workout gear</div>
+          <div class="cat-img-desc">Resistance bands, sandbags, portable training</div>
+        </div>
       </a>
-      <a href="/gear/waterproof.html" class="cat">
-        <div class="cat-num">03</div>
-        <div class="cat-title">Waterproof essentials</div>
-        <div class="cat-desc">Dry bags, cases, and gear built for wet</div>
+      <a href="/gear/waterproof.html" class="cat-img-card" style="background-image: url('https://images.pexels.com/photos/1604869/pexels-photo-1604869.jpeg?auto=compress&cs=tinysrgb&w=600')">
+        <div class="cat-img-overlay"></div>
+        <div class="cat-img-content">
+          <div class="cat-img-num">03</div>
+          <div class="cat-img-title">Waterproof essentials</div>
+          <div class="cat-img-desc">Dry bags, cases, and gear built for wet</div>
+        </div>
       </a>
-      <a href="/gear/tech.html" class="cat">
-        <div class="cat-num">04</div>
-        <div class="cat-title">Ocean fitness tech</div>
-        <div class="cat-desc">Waterproof trackers, dive watches, GPS</div>
+      <a href="/gear/tech.html" class="cat-img-card" style="background-image: url('https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=600')">
+        <div class="cat-img-overlay"></div>
+        <div class="cat-img-content">
+          <div class="cat-img-num">04</div>
+          <div class="cat-img-title">Ocean fitness tech</div>
+          <div class="cat-img-desc">Waterproof trackers, dive watches, GPS</div>
+        </div>
       </a>
-      <a href="/gear/sun.html" class="cat">
-        <div class="cat-num">05</div>
-        <div class="cat-title">Sun protection</div>
-        <div class="cat-desc">Reef-safe sunscreen, rash guards, UV gear</div>
+      <a href="/gear/sun.html" class="cat-img-card" style="background-image: url('https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=600')">
+        <div class="cat-img-overlay"></div>
+        <div class="cat-img-content">
+          <div class="cat-img-num">05</div>
+          <div class="cat-img-title">Sun protection</div>
+          <div class="cat-img-desc">Reef-safe sunscreen, rash guards, UV gear</div>
+        </div>
       </a>
-      <a href="/gear/carry.html" class="cat">
-        <div class="cat-num">06</div>
-        <div class="cat-title">Carry & transport</div>
-        <div class="cat-desc">Roof racks, board bags, carts, coolers</div>
+      <a href="/gear/carry.html" class="cat-img-card" style="background-image: url('https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=600')">
+        <div class="cat-img-overlay"></div>
+        <div class="cat-img-content">
+          <div class="cat-img-num">06</div>
+          <div class="cat-img-title">Carry & transport</div>
+          <div class="cat-img-desc">Roof racks, board bags, carts, coolers</div>
+        </div>
       </a>
     </div>
   </section>
 
+  <!-- GUIDES -->
   <section class="section container">
     <div class="section-top">
       <div>
@@ -179,6 +183,7 @@
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="cta-wrap container">
     <div class="cta">
       <div>
@@ -189,6 +194,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer-wrap">
     <div class="footer container">
       <div class="footer-left">
@@ -198,6 +204,16 @@
       <div class="footer-right">© 2026 RendezBlu</div>
     </div>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+  </script>
 
 </body>
 </html>
