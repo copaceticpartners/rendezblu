@@ -189,6 +189,14 @@
   </footer>
 
   <script>
+    // Sticky nav scroll effect
+    const nav = document.querySelector('.sticky-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+
+  <script>
     const slides = document.querySelectorAll('.hero-slide');
     let current = 0;
     setInterval(() => {

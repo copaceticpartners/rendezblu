@@ -852,3 +852,47 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-logo span { color: #5BA8D4; }
+
+/* STICKY LOGO NAV */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.1rem 2rem;
+  background: transparent;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sticky-nav.scrolled {
+  background: rgba(250,248,243,0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(226,221,213,0.8);
+}
+
+.sticky-logo {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 2px 12px rgba(13,33,55,0.5);
+  transition: color 0.3s;
+}
+
+.sticky-nav.scrolled .sticky-logo {
+  color: var(--navy);
+  text-shadow: none;
+}
+
+.sticky-logo span {
+  color: #5BA8D4;
+  transition: color 0.3s;
+}
+
+.sticky-nav.scrolled .sticky-logo span {
+  color: var(--ocean);
+}
