@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Gear — RendezBlu</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero { background: var(--navy); padding: 5rem 2rem 3rem; text-align: center; }
+    .page-hero-title { font-family: var(--display); font-size: clamp(48px, 8vw, 80px); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; color: #fff; margin-bottom: 0.75rem; }
+    .page-hero-sub { font-family: var(--body); font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.6); margin-bottom: 2rem; }
+    .search-wrap { max-width: 560px; margin: 0 auto; position: relative; }
+    .search-input { width: 100%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; padding: 14px 24px; font-family: var(--body); font-size: 15px; color: #fff; outline: none; }
+    .search-input::placeholder { color: rgba(255,255,255,0.4); }
+    .search-input:focus { border-color: var(--sky); background: rgba(255,255,255,0.15); }
+    .page-body { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .gear-section { margin-bottom: 4rem; }
+    .gear-section-title { font-family: var(--display); font-size: 28px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; color: var(--navy); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--ocean); display: inline-block; }
+    .gear-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+    .gear-card { background: #fff; border: 1px solid var(--card-border); border-radius: 14px; overflow: hidden; transition: border-color 0.2s, transform 0.15s; display: block; text-decoration: none; }
+    .gear-card:hover { border-color: var(--ocean); transform: translateY(-2px); }
+    .gear-card-img { height: 180px; background-size: cover; background-position: center; }
+    .gear-card-body { padding: 1.25rem; }
+    .gear-card-tag { font-family: 'Courier New', monospace; font-size: 10px; color: var(--ocean); letter-spacing: 0.12em; margin-bottom: 0.4rem; }
+    .gear-card-name { font-family: var(--display); font-size: 17px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.25rem; line-height: 1.2; }
+    .gear-card-price { font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--ocean); margin-bottom: 0.75rem; }
+    .gear-card-cta { font-family: var(--display); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ocean); }
+    .no-results { text-align: center; padding: 4rem; color: var(--hint); font-family: var(--body); display: none; }
+    .no-results-title { font-family: var(--display); font-size: 24px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.5rem; }
+    @media (max-width: 768px) { .gear-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 480px) { .gear-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="page-hero">
+    <a href="/" style="font-family: var(--display); font-size: 22px; font-weight: 700; color: #fff; text-decoration: none; display: block; margin-bottom: 1.5rem;">Rendez<span style="color: #5BA8D4;">Blu</span></a>
+    <div class="page-hero-title">Shop Gear</div>
+    <div class="page-hero-sub">Curated water gear. Honest reviews. Real affiliate links.</div>
+    <div class="search-wrap">
+      <input type="text" class="search-input" id="gearSearch" placeholder="Search gear — paddleboards, dry bags, watches..." />
+    </div>
+  </div>
+
+  <div class="page-body">
+    <div id="noResults" class="no-results">
+      <div class="no-results-title">Nothing found</div>
+      <div>Try a different search term</div>
+    </div>
+
+    <div class="gear-section" data-section="paddleboards">
+      <div class="gear-section-title">Paddleboards & SUP</div>
+      <div class="gear-grid">
+        <a href="/guides/best-inflatable-paddleboards-under-500.html" class="gear-card" data-name="irocker cruiser paddleboard sup inflatable">
+          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/6964901/pexels-photo-6964901.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body">
+            <div class="gear-card-tag">// paddleboards</div>
+            <div class="gear-card-name">iROCKER Cruiser 7.0</div>
+            <div class="gear-card-price">~$499</div>
+            <div class="gear-card-cta">View review →</div>
+          </div>
+        </a>
+        <a href="/guides/best-inflatable-paddleboards-under-500.html" class="gear-card" data-name="roc paddleboard sup inflatable beginner">
+          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/1295036/pexels-photo-1295036.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body">
+            <div class="gear-card-tag">// paddleboards</div>
+            <div class="gear-card-name">ROC Inflatable SUP</div>
+            <div class="gear-card-price">~$299–349</div>
+            <div class="gear-card-cta">View review →</div>
+          </div>
+        </a>
+        <a href="/guides/best-inflatable-paddleboards-under-500.html" class="gear-card" data-name="retrospec weekender kayak combo sup paddleboard">
+          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/4784917/pexels-photo-4784917.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body">
+            <div class="gear-card-tag">// paddleboards</div>
+            <div class="gear-card-name">Retrospec Weekender Plus</div>
+            <div class="gear-card-price">~$349–399</div>
+            <div class="gear-card-cta">View review →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="gear-section" data-section="beach-workout">
+      <div class="gear-section-title">Beach Workout Gear</div>
+      <div class="gear-grid">
+        <a href="https://www.amazon.com/s?k=WHATAFIT+resistance+bands+set&tag=rendezblu-20" class="gear-card" data-name="resistance bands workout beach fitness" target="_blank" rel="nofollow">
+          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/8544754/pexels-photo-8544754.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body">
+            <div class="gear-card-tag">// beach workout</div>
+            <div class="gear-card-name">WHATAFIT Resistance Bands Set</div>
+            <div class="gear-card-price">~$30</div>
+            <div class="gear-card-cta">Buy on Amazon →</div>
+          </div>
+        </a>
+        <a href="/guides/beach-gym-setup-under-200.html" class="gear-card" data-name="beach gym setup workout fitness outdoor">
+          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body">
+            <div class="gear-card-tag">// beach workout</div>
+            <div class="gear-card-name">Complete Beach Gym Under $200</div>
+            <div class="gear-card-price">Full guide</div>
+            <div class="gear-card-cta">Read guide →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="gear-section" data-section="waterproof">
+      <div class="gear-section-title">Waterproof Essentials</div>
+      <div class="gear-grid">
+        <a href="https://www.amazon.com/Earth-Pak-Waterproof-Dry-Bag/dp/B0BBBWR2H6?tag=rendezblu-20" class="gear-card" data-name="earth pak dry bag waterproof kayak" target="_blank" rel="nofollow">
+          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/8481976/pexels-photo-8481976.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body">
+            <div class="gear-card-tag">// waterproof</div>
+            <div class="gear-card-name">Earth Pak Waterproof Dry Bag</div>
+            <div class="gear-card-price">~$35</div>
+            <div class="gear-card-cta">Buy on Amazon →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="gear-section" data-section="tech">
+      <div class="gear-section-title">Ocean Fitness Tech</div>
+      <div class="gear-grid">
+        <a href="https://www.amazon.com/Garmin-Instinct-Charging-Capabilities-Multi-GNSS/dp/B09NMKGRMZ?tag=rendezblu-20" class="gear-card" data-name="garmin instinct solar gps watch waterproof ocean fitness" target="_blank" rel="nofollow">
+          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/4908545/pexels-photo-4908545.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body">
+            <div class="gear-card-tag">// tech</div>
+            <div class="gear-card-name">Garmin Instinct 2 Solar</div>
+            <div class="gear-card-price">~$299</div>
+            <div class="gear-card-cta">Buy on Amazon →</div>
+          </div>
+        </a>
+        <a href="/guides/best-waterproof-fitness-trackers.html" class="gear-card" data-name="waterproof fitness tracker watch ocean swimming">
+          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body">
+            <div class="gear-card-tag">// tech</div>
+            <div class="gear-card-name">Best Waterproof Fitness Trackers</div>
+            <div class="gear-card-price">Full guide</div>
+            <div class="gear-card-cta">Read guide →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="gear-section" data-section="water-sports">
+      <div class="gear-section-title">Water Sports</div>
+      <div class="gear-grid">
+        <a href="/gear/water-sports.html" class="gear-card" data-name="kitesurfing kite surfing water sports">
+          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/28830210/pexels-photo-28830210.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body">
+            <div class="gear-card-tag">// water sports</div>
+            <div class="gear-card-name">Water Sports Gear Guide</div>
+            <div class="gear-card-price">Browse all</div>
+            <div class="gear-card-cta">Explore →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="gear-section" data-section="carry">
+      <div class="gear-section-title">Carry & Transport</div>
+      <div class="gear-grid">
+        <a href="https://www.amazon.com/Suspenz-Single-Up-Airless-SUP-Cart/dp/B07B3NQVKR?tag=rendezblu-20" class="gear-card" data-name="suspenz sup cart paddleboard transport carry wheels" target="_blank" rel="nofollow">
+          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/7276610/pexels-photo-7276610.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body">
+            <div class="gear-card-tag">// carry & transport</div>
+            <div class="gear-card-name">Suspenz Single-Up SUP Cart</div>
+            <div class="gear-card-price">~$89</div>
+            <div class="gear-card-cta">Buy on Amazon →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-wrap">
+    <div class="footer container">
+      <div class="footer-left">
+        <div class="footer-logo">Rendez<span class="footer-logo-blu">Blu</span></div>
+        <div class="footer-tagline">where blu meets blu.</div>
+      </div>
+      <div class="footer-right">© 2026 RendezBlu</div>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('gearSearch');
+    const cards = document.querySelectorAll('.gear-card');
+    const sections = document.querySelectorAll('.gear-section');
+    const noResults = document.getElementById('noResults');
+
+    searchInput.addEventListener('input', function() {
+      const q = this.value.toLowerCase().trim();
+      let anyVisible = false;
+
+      cards.forEach(card => {
+        const name = card.dataset.name || '';
+        const visible = !q || name.includes(q);
+        card.style.display = visible ? '' : 'none';
+        if (visible) anyVisible = true;
+      });
+
+      sections.forEach(section => {
+        const visibleCards = [...section.querySelectorAll('.gear-card')].some(c => c.style.display !== 'none');
+        section.style.display = visibleCards ? '' : 'none';
+      });
+
+      noResults.style.display = anyVisible ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>

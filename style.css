@@ -839,3 +839,16 @@ a { text-decoration: none; color: inherit; }
 .hero-sub {
   text-shadow: 0 1px 8px rgba(13,33,55,0.8);
 }
+
+/* HERO LOGO */
+.hero-logo {
+  font-family: var(--display);
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 20px rgba(13,33,55,0.8);
+}
+
+.hero-logo span { color: #5BA8D4; }
