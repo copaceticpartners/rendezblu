@@ -840,26 +840,18 @@ a { text-decoration: none; color: inherit; }
   text-shadow: 0 1px 8px rgba(13,33,55,0.8);
 }
 
-/* HERO LOGO */
-.hero-logo {
-  font-family: var(--display);
-  font-size: 42px;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  color: #fff;
-  margin-bottom: 1rem;
-  text-shadow: 0 2px 20px rgba(13,33,55,0.8);
-}
 
-.hero-logo span { color: #5BA8D4; }
 
-/* STICKY LOGO NAV */
+
+
+/* UNIVERSAL NAV */
 .sticky-nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.1rem 2rem;
   background: transparent;
   transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
@@ -879,8 +871,8 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.02em;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 2px 12px rgba(13,33,55,0.5);
-  transition: color 0.3s;
+  text-shadow: 0 2px 12px rgba(13,33,55,0.6);
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 .sticky-nav.scrolled .sticky-logo {
@@ -896,3 +888,50 @@ a { text-decoration: none; color: inherit; }
 .sticky-nav.scrolled .sticky-logo span {
   color: var(--ocean);
 }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-guides-link {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  text-shadow: 0 1px 8px rgba(13,33,55,0.5);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.sticky-nav.scrolled .nav-guides-link {
+  color: var(--muted);
+  text-shadow: none;
+}
+
+.nav-shop-btn {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  text-decoration: none;
+  padding: 9px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.sticky-nav.scrolled .nav-shop-btn {
+  background: var(--navy);
+  color: var(--cream);
+  border-color: var(--navy);
+}
+
+.nav-shop-btn:hover { opacity: 0.85; }

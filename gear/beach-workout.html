@@ -47,9 +47,12 @@
   </style>
 </head>
 <body>
-  <header class="sticky-nav scrolled">
-    <a href="/" class="sticky-logo" style="color: var(--navy); text-shadow: none;">Rendez<span style="color: var(--ocean);">Blu</span></a>
-    <a href="/guides.html" style="font-family: var(--display); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-left: 2rem;">Guides</a>
+  <header class="sticky-nav" id="mainNav">
+    <a href="/" class="sticky-logo">Rendez<span>Blu</span></a>
+    <div class="nav-right">
+      <a href="/guides.html" class="nav-guides-link">Guides</a>
+      <a href="/gear.html" class="nav-shop-btn">Shop Gear</a>
+    </div>
   </header>
 
   <div class="cat-hero">
@@ -115,5 +118,13 @@
       <div class="footer-right">© 2026 RendezBlu</div>
     </div>
   </footer>
+  <script>
+    const nav = document.getElementById('mainNav');
+    if (nav) {
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+      });
+    }
+  </script>
 </body>
 </html>

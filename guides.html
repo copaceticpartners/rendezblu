@@ -36,11 +36,14 @@
   </style>
 </head>
 <body>
-
-  <header class="sticky-nav scrolled" style="position: sticky; top: 0; background: rgba(250,248,243,0.95); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(226,221,213,0.8); display: flex; align-items: center; gap: 2rem; padding: 1.1rem 2rem; z-index: 100;">
-    <a href="/" class="sticky-logo" style="color: var(--navy); text-shadow: none; font-size: 22px;">Rendez<span style="color: var(--ocean);">Blu</span></a>
-    <a href="/guides.html" style="font-family: var(--display); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none;">Guides</a>
+  <header class="sticky-nav" id="mainNav">
+    <a href="/" class="sticky-logo">Rendez<span>Blu</span></a>
+    <div class="nav-right">
+      <a href="/guides.html" class="nav-guides-link">Guides</a>
+      <a href="/gear.html" class="nav-shop-btn">Shop Gear</a>
+    </div>
   </header>
+
   <div class="page-hero">
     <div class="page-hero-title">Guides</div>
     <div class="page-hero-sub">Buyer's guides, gear reviews, and how-tos for life on the water.</div>
@@ -153,6 +156,14 @@
         applyFilters();
       });
     });
+  </script>
+  <script>
+    const nav = document.getElementById('mainNav');
+    if (nav) {
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+      });
+    }
   </script>
 </body>
 </html>

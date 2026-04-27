@@ -12,6 +12,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="sticky-nav" id="mainNav">
+    <a href="/" class="sticky-logo">Rendez<span>Blu</span></a>
+    <div class="nav-right">
+      <a href="/guides.html" class="nav-guides-link">Guides</a>
+      <a href="/gear.html" class="nav-shop-btn">Shop Gear</a>
+    </div>
+  </header>
 
   <!-- HERO SLIDESHOW -->
   <section class="hero-video">
@@ -189,14 +196,6 @@
   </footer>
 
   <script>
-    // Sticky nav scroll effect
-    const nav = document.querySelector('.sticky-nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-  </script>
-
-  <script>
     const slides = document.querySelectorAll('.hero-slide');
     let current = 0;
     setInterval(() => {
@@ -206,5 +205,13 @@
     }, 5000);
   </script>
 
+  <script>
+    const nav = document.getElementById('mainNav');
+    if (nav) {
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+      });
+    }
+  </script>
 </body>
 </html>
