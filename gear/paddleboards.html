@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paddleboards & SUP — RendezBlu</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .cat-hero { position: relative; height: 70vh; min-height: 500px; display: flex; align-items: flex-end; overflow: hidden; padding-top: 80px; }
+    .cat-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+    .cat-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,33,55,0.9) 0%, rgba(13,33,55,0.3) 60%, rgba(13,33,55,0.2) 100%); }
+    .cat-hero-content { position: relative; z-index: 2; padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; width: 100%; }
+    .cat-hero-label { font-family: 'Courier New', monospace; font-size: 11px; color: var(--sky); letter-spacing: 0.15em; margin-bottom: 0.75rem; }
+    .cat-hero-title { font-family: var(--display); font-size: clamp(48px, 8vw, 96px); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; line-height: 0.9; color: #fff; margin-bottom: 1rem; }
+    .cat-hero-sub { font-family: var(--body); font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.7); max-width: 500px; line-height: 1.7; }
+    .cat-body { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+    .cat-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid var(--warm-border); align-items: start; }
+    .cat-intro-text h2 { font-family: var(--display); font-size: 36px; font-weight: 700; text-transform: uppercase; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 1rem; }
+    .cat-intro-text p { font-family: var(--body); font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+    .cat-facts { display: flex; flex-direction: column; gap: 1rem; }
+    .cat-fact { background: #fff; border: 1px solid var(--card-border); border-radius: 12px; padding: 1.25rem 1.5rem; }
+    .cat-fact-title { font-family: var(--display); font-size: 16px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.35rem; letter-spacing: 0.02em; }
+    .cat-fact-body { font-family: var(--body); font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; }
+    .cat-guides-title { font-family: var(--display); font-size: 32px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 1.5rem; letter-spacing: -0.01em; }
+    .cat-guide-card { display: block; background: var(--light-blue-bg); border: 1px solid var(--light-blue-border); border-radius: 16px; padding: 2rem; margin-bottom: 1rem; transition: border-color 0.2s; text-decoration: none; }
+    .cat-guide-card:hover { border-color: var(--ocean); }
+    .cat-guide-tag { font-family: 'Courier New', monospace; font-size: 10px; color: var(--ocean); letter-spacing: 0.12em; margin-bottom: 0.75rem; display: block; }
+    .cat-guide-h { font-family: var(--display); font-size: 22px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.5rem; letter-spacing: 0.01em; }
+    .cat-guide-meta { font-family: var(--body); font-size: 12px; color: var(--muted); font-weight: 300; margin-bottom: 1rem; }
+    .cat-guide-link { font-family: var(--display); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ocean); }
+    .coming-soon { background: #fff; border: 1px dashed var(--card-border); border-radius: 16px; padding: 2rem; text-align: center; }
+    .coming-soon-text { font-family: var(--display); font-size: 18px; font-weight: 600; text-transform: uppercase; color: var(--hint); letter-spacing: 0.04em; }
+    .coming-soon-sub { font-family: var(--body); font-size: 13px; color: var(--hint); font-weight: 300; margin-top: 0.5rem; }
+    @media (max-width: 768px) { .cat-intro { grid-template-columns: 1fr; gap: 2rem; } }
+  </style>
+</head>
+<body>
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a href="/" class="logo">Rendez<span class="logo-blu">Blu</span></a>
+      <div class="nav-links">
+        <a href="/guides.html" class="nav-link">Guides</a>
+        <a href="/about.html" class="nav-link">About</a>
+      </div>
+      <a href="/guides.html" class="nav-cta">Shop gear</a>
+    </nav>
+  </header>
+
+  <div class="cat-hero">
+    <div class="cat-hero-bg" style="background-image: url('https://images.pexels.com/photos/6964901/pexels-photo-6964901.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+    <div class="cat-hero-overlay"></div>
+    <div class="cat-hero-content">
+      <div class="cat-hero-label">// gear category 01</div>
+      <div class="cat-hero-title">Paddleboards<br/>& SUP</div>
+      <div class="cat-hero-sub">Flatwater, open ocean, river runs. If it floats and you're standing on it, we've got the breakdown.</div>
+    </div>
+  </div>
+
+  <div class="cat-body">
+    <div class="cat-intro">
+      <div class="cat-intro-text">
+        <h2>Why SUP is the move</h2>
+        <p>Stand up paddleboarding is the rare water sport that's genuinely accessible to everyone — first session to advanced ocean paddling, the learning curve is real but forgiving. You're outside, you're on the water, and your core is working harder than you think.</p>
+        <p>The gear has gotten seriously good. Inflatable boards now rival hardboards in rigidity, pack into a backpack, and won't destroy your car roof. If you haven't tried one in the last few years, the technology has quietly gotten a lot better.</p>
+        <p>We break down every board type, price range, and use case so you stop overthinking it and start paddling.</p>
+      </div>
+      <div class="cat-facts">
+        <div class="cat-fact">
+          <div class="cat-fact-title">Inflatable vs Hardboard</div>
+          <div class="cat-fact-body">Inflatables win on portability and storage. Hardboards win on performance and speed. For 90% of beginners, inflatable is the right call.</div>
+        </div>
+        <div class="cat-fact">
+          <div class="cat-fact-title">Width = Stability</div>
+          <div class="cat-fact-body">Beginners should look for 32"+ wide boards. The wider the board, the more stable it feels underfoot — especially in choppy water.</div>
+        </div>
+        <div class="cat-fact">
+          <div class="cat-fact-title">PSI Matters</div>
+          <div class="cat-fact-body">Inflate your board to 12–15 PSI for near-hardboard rigidity. Under-inflated boards flex and feel unstable — most beginners don't pump enough.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-guides-title">Guides & Reviews</div>
+    <a href="/guides/best-inflatable-paddleboards-under-500.html" class="cat-guide-card">
+      <div class="cat-guide-tag">// buyer's guide</div>
+      <div class="cat-guide-h">Best inflatable paddleboards under $500 for beginners (2026)</div>
+      <div class="cat-guide-meta">SUP · 8 min read · Updated April 2026</div>
+      <div class="cat-guide-link">Read guide →</div>
+    </a>
+    <div class="coming-soon">
+      <div class="coming-soon-text">More guides dropping soon</div>
+      <div class="coming-soon-sub">Best hardboards, SUP yoga boards, ocean vs lake setups — all coming.</div>
+    </div>
+  </div>
+
+  <footer class="footer-wrap">
+    <div class="footer container">
+      <div class="footer-left">
+        <div class="footer-logo">Rendez<span class="footer-logo-blu">Blu</span></div>
+        <div class="footer-tagline">where blu meets blu.</div>
+      </div>
+      <div class="footer-right">© 2026 RendezBlu</div>
+    </div>
+  </footer>
+</body>
+</html>

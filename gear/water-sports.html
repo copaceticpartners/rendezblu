@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Sports — RendezBlu</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .cat-hero { position: relative; height: 70vh; min-height: 500px; display: flex; align-items: flex-end; overflow: hidden; padding-top: 80px; }
+    .cat-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+    .cat-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,33,55,0.9) 0%, rgba(13,33,55,0.3) 60%, rgba(13,33,55,0.2) 100%); }
+    .cat-hero-content { position: relative; z-index: 2; padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; width: 100%; }
+    .cat-hero-label { font-family: 'Courier New', monospace; font-size: 11px; color: var(--sky); letter-spacing: 0.15em; margin-bottom: 0.75rem; }
+    .cat-hero-title { font-family: var(--display); font-size: clamp(48px, 8vw, 96px); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; line-height: 0.9; color: #fff; margin-bottom: 1rem; }
+    .cat-hero-sub { font-family: var(--body); font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.7); max-width: 500px; line-height: 1.7; }
+    .cat-body { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+    .cat-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid var(--warm-border); align-items: start; }
+    .cat-intro-text h2 { font-family: var(--display); font-size: 36px; font-weight: 700; text-transform: uppercase; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 1rem; }
+    .cat-intro-text p { font-family: var(--body); font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+    .cat-facts { display: flex; flex-direction: column; gap: 1rem; }
+    .cat-fact { background: #fff; border: 1px solid var(--card-border); border-radius: 12px; padding: 1.25rem 1.5rem; }
+    .cat-fact-title { font-family: var(--display); font-size: 16px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.35rem; letter-spacing: 0.02em; }
+    .cat-fact-body { font-family: var(--body); font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; }
+    .cat-guides-title { font-family: var(--display); font-size: 32px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 1.5rem; letter-spacing: -0.01em; }
+    .coming-soon { background: #fff; border: 1px dashed var(--card-border); border-radius: 16px; padding: 2rem; text-align: center; }
+    .coming-soon-text { font-family: var(--display); font-size: 18px; font-weight: 600; text-transform: uppercase; color: var(--hint); letter-spacing: 0.04em; }
+    .coming-soon-sub { font-family: var(--body); font-size: 13px; color: var(--hint); font-weight: 300; margin-top: 0.5rem; }
+    @media (max-width: 768px) { .cat-intro { grid-template-columns: 1fr; gap: 2rem; } }
+
+    .featured-product { background: #fff; border: 1px solid var(--card-border); border-radius: 16px; overflow: hidden; margin-bottom: 2rem; display: grid; grid-template-columns: 280px 1fr; }
+    .featured-product-img { background: #f5f5f5; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .featured-product-img img { width: 100%; max-width: 220px; height: 220px; object-fit: contain; }
+    .featured-product-info { padding: 2rem; }
+    .featured-product-tag { font-family: 'Courier New', monospace; font-size: 10px; color: var(--ocean); letter-spacing: 0.12em; margin-bottom: 0.5rem; }
+    .featured-product-name { font-family: var(--display); font-size: 24px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.25rem; letter-spacing: 0.01em; }
+    .featured-product-tagline { font-size: 13px; color: var(--ocean); font-weight: 400; margin-bottom: 1rem; }
+    .featured-product-body { font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .featured-product-price { font-family: var(--display); font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 1rem; }
+    .featured-product-cta { display: inline-block; background: var(--ocean); color: #fff; font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 26px; border-radius: 100px; text-decoration: none; transition: background 0.2s; }
+    .featured-product-cta:hover { background: var(--navy); }
+    @media (max-width: 768px) { .featured-product { grid-template-columns: 1fr; } .featured-product-img { height: 200px; } }
+
+  </style>
+</head>
+<body>
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a href="/" class="logo">Rendez<span class="logo-blu">Blu</span></a>
+      <div class="nav-links">
+        <a href="/guides.html" class="nav-link">Guides</a>
+        <a href="/about.html" class="nav-link">About</a>
+      </div>
+      <a href="/guides.html" class="nav-cta">Shop gear</a>
+    </nav>
+  </header>
+
+  <div class="cat-hero">
+    <div class="cat-hero-bg" style="background-image: url('https://images.pexels.com/photos/28830210/pexels-photo-28830210.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+    <div class="cat-hero-overlay"></div>
+    <div class="cat-hero-content">
+      <div class="cat-hero-label">// gear category 05</div>
+      <div class="cat-hero-title">Water<br/>Sports</div>
+      <div class="cat-hero-sub">Surfing, kitesurfing, kayaking, wakeboarding. If it involves water and adrenaline, we cover the gear.</div>
+    </div>
+  </div>
+
+  <div class="cat-body">
+    <div class="cat-intro">
+      <div class="cat-intro-text">
+        <h2>Every discipline. One source.</h2>
+        <p>Water sports is a broad category because water itself is broad. The gear for kitesurfing looks nothing like the gear for kayaking. The mindset is the same — get out there, push your limits, respect the water — but the equipment is completely different.</p>
+        <p>We cover the full spectrum: surfboards and fins, kite and wing setups, kayak paddles and PFDs, wakeboard bindings, and everything in between. No matter which direction the water pulls you, we've got the breakdown on what gear is actually worth buying.</p>
+        <p>Start with what sounds fun and we'll get you set up right.</p>
+      </div>
+      <div class="cat-facts">
+        <div class="cat-fact">
+          <div class="cat-fact-title">Kitesurfing is Accessible</div>
+          <div class="cat-fact-body">Modern kite gear has made learning significantly safer. Depower systems let beginners drop power instantly. A proper lesson and decent gear is all you need to get started.</div>
+        </div>
+        <div class="cat-fact">
+          <div class="cat-fact-title">Surfboard Volume = Paddling</div>
+          <div class="cat-fact-body">More volume means easier paddling and easier pop-ups. Beginners should ride more volume than they think they need. You can always go smaller as skills improve.</div>
+        </div>
+        <div class="cat-fact">
+          <div class="cat-fact-title">Kayak vs SUP</div>
+          <div class="cat-fact-body">Kayaking wins on speed and stability in rough water. SUP wins on versatility and full-body workout. Both are worth having if you're serious about water time.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-guides-title">Featured Gear</div>
+    <div class="featured-product">
+      <div class="featured-product-img">
+        <img src="https://m.media-amazon.com/images/I/71yL+vhp28L._AC_SL1500_.jpg" alt="Body Glove Performer 11 Inflatable SUP" loading="lazy" />
+      </div>
+      <div class="featured-product-info">
+        <div class="featured-product-tag">// featured gear</div>
+        <div class="featured-product-name">Body Glove Performer 11 Inflatable SUP</div>
+        <div class="featured-product-tagline">The crossover board — works for flatwater, surf, and everything in between</div>
+        <div class="featured-product-body">The Body Glove Performer is built for people who want to do it all. Stable enough for beginners, responsive enough for light surf. If you want a single board that handles ocean, lake, and river use without compromise, this is the one. Complete kit included.</div>
+        <div class="featured-product-price">~$399</div>
+        <a href="https://www.amazon.com/s?k=Body+Glove+inflatable+paddle+board+11&tag=rendezblu-20" class="featured-product-cta" target="_blank" rel="nofollow">Check price on Amazon →</a>
+      </div>
+    </div>
+
+    <div class="cat-guides-title">Guides & Reviews</div>
+    <div class="coming-soon">
+      <div class="coming-soon-text">Guides dropping soon</div>
+      <div class="coming-soon-sub">Beginner surf gear, kitesurf setups, kayak reviews — all coming.</div>
+    </div>
+  </div>
+
+  <footer class="footer-wrap">
+    <div class="footer container">
+      <div class="footer-left">
+        <div class="footer-logo">Rendez<span class="footer-logo-blu">Blu</span></div>
+        <div class="footer-tagline">where blu meets blu.</div>
+      </div>
+      <div class="footer-right">© 2026 RendezBlu</div>
+    </div>
+  </footer>
+</body>
+</html>

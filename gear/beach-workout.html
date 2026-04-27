@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beach Workout Gear — RendezBlu</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .cat-hero { position: relative; height: 70vh; min-height: 500px; display: flex; align-items: flex-end; overflow: hidden; padding-top: 80px; }
+    .cat-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+    .cat-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,33,55,0.9) 0%, rgba(13,33,55,0.3) 60%, rgba(13,33,55,0.2) 100%); }
+    .cat-hero-content { position: relative; z-index: 2; padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; width: 100%; }
+    .cat-hero-label { font-family: 'Courier New', monospace; font-size: 11px; color: var(--sky); letter-spacing: 0.15em; margin-bottom: 0.75rem; }
+    .cat-hero-title { font-family: var(--display); font-size: clamp(48px, 8vw, 96px); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; line-height: 0.9; color: #fff; margin-bottom: 1rem; }
+    .cat-hero-sub { font-family: var(--body); font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.7); max-width: 500px; line-height: 1.7; }
+    .cat-body { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+    .cat-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid var(--warm-border); align-items: start; }
+    .cat-intro-text h2 { font-family: var(--display); font-size: 36px; font-weight: 700; text-transform: uppercase; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 1rem; }
+    .cat-intro-text p { font-family: var(--body); font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+    .cat-facts { display: flex; flex-direction: column; gap: 1rem; }
+    .cat-fact { background: #fff; border: 1px solid var(--card-border); border-radius: 12px; padding: 1.25rem 1.5rem; }
+    .cat-fact-title { font-family: var(--display); font-size: 16px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.35rem; letter-spacing: 0.02em; }
+    .cat-fact-body { font-family: var(--body); font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; }
+    .cat-guides-title { font-family: var(--display); font-size: 32px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 1.5rem; letter-spacing: -0.01em; }
+    .coming-soon { background: #fff; border: 1px dashed var(--card-border); border-radius: 16px; padding: 2rem; text-align: center; }
+    .coming-soon-text { font-family: var(--display); font-size: 18px; font-weight: 600; text-transform: uppercase; color: var(--hint); letter-spacing: 0.04em; }
+    .coming-soon-sub { font-family: var(--body); font-size: 13px; color: var(--hint); font-weight: 300; margin-top: 0.5rem; }
+    @media (max-width: 768px) { .cat-intro { grid-template-columns: 1fr; gap: 2rem; } }
+
+    .featured-product { background: #fff; border: 1px solid var(--card-border); border-radius: 16px; overflow: hidden; margin-bottom: 2rem; display: grid; grid-template-columns: 280px 1fr; }
+    .featured-product-img { background: #f5f5f5; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .featured-product-img img { width: 100%; max-width: 220px; height: 220px; object-fit: contain; }
+    .featured-product-info { padding: 2rem; }
+    .featured-product-tag { font-family: 'Courier New', monospace; font-size: 10px; color: var(--ocean); letter-spacing: 0.12em; margin-bottom: 0.5rem; }
+    .featured-product-name { font-family: var(--display); font-size: 24px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.25rem; letter-spacing: 0.01em; }
+    .featured-product-tagline { font-size: 13px; color: var(--ocean); font-weight: 400; margin-bottom: 1rem; }
+    .featured-product-body { font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .featured-product-price { font-family: var(--display); font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 1rem; }
+    .featured-product-cta { display: inline-block; background: var(--ocean); color: #fff; font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 26px; border-radius: 100px; text-decoration: none; transition: background 0.2s; }
+    .featured-product-cta:hover { background: var(--navy); }
+    @media (max-width: 768px) { .featured-product { grid-template-columns: 1fr; } .featured-product-img { height: 200px; } }
+
+  </style>
+</head>
+<body>
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a href="/" class="logo">Rendez<span class="logo-blu">Blu</span></a>
+      <div class="nav-links">
+        <a href="/guides.html" class="nav-link">Guides</a>
+        <a href="/about.html" class="nav-link">About</a>
+      </div>
+      <a href="/guides.html" class="nav-cta">Shop gear</a>
+    </nav>
+  </header>
+
+  <div class="cat-hero">
+    <div class="cat-hero-bg" style="background-image: url('https://images.pexels.com/photos/8544754/pexels-photo-8544754.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+    <div class="cat-hero-overlay"></div>
+    <div class="cat-hero-content">
+      <div class="cat-hero-label">// gear category 02</div>
+      <div class="cat-hero-title">Beach<br/>Workout Gear</div>
+      <div class="cat-hero-sub">Sand makes everything harder. That's the point. Build a portable gym that goes wherever the water is.</div>
+    </div>
+  </div>
+
+  <div class="cat-body">
+    <div class="cat-intro">
+      <div class="cat-intro-text">
+        <h2>Train where you'd rather be anyway</h2>
+        <p>The beach is the best gym you'll ever have access to — and it's free. Sand adds resistance to every movement, the uneven surface fires up stabilizer muscles you didn't know existed, and the salt air makes it all feel less like work.</p>
+        <p>You don't need much. A set of resistance bands, a sandbag, and some bodyweight programming will give you a full-body workout that demolishes anything you'd do inside. The trick is having gear that can take the abuse — sand, saltwater, sun — and still perform.</p>
+        <p>We find gear built for the beach, not just gear that happens to work at the beach.</p>
+      </div>
+      <div class="cat-facts">
+        <div class="cat-fact">
+          <div class="cat-fact-title">Sand = Free Resistance</div>
+          <div class="cat-fact-body">Running, lunging, and jumping on sand burns 30% more calories than the same movements on a hard surface. Your ankles will hate you. Your glutes will thank you.</div>
+        </div>
+        <div class="cat-fact">
+          <div class="cat-fact-title">Portable Is Everything</div>
+          <div class="cat-fact-body">The best beach workout gear fits in a backpack. Resistance bands, a sandbag, a jump rope. Total weight under 10 lbs. Total workout potential: unlimited.</div>
+        </div>
+        <div class="cat-fact">
+          <div class="cat-fact-title">Salt & Sand Resistant</div>
+          <div class="cat-fact-body">Not all gear survives the beach. Look for rust-proof hardware, sealed stitching, and materials that rinse clean. Cheap gear deteriorates fast in saltwater environments.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-guides-title">Featured Gear</div>
+    <div class="featured-product">
+      <div class="featured-product-img">
+        <img src="https://m.media-amazon.com/images/I/71a7dRsNOkL._AC_SL1500_.jpg" alt="WHATAFIT Resistance Bands Set" loading="lazy" />
+      </div>
+      <div class="featured-product-info">
+        <div class="featured-product-tag">// featured gear</div>
+        <div class="featured-product-name">WHATAFIT Resistance Bands Set</div>
+        <div class="featured-product-tagline">The most complete resistance band kit for beach workouts</div>
+        <div class="featured-product-body">Five resistance levels, handles, ankle straps, and a door anchor — everything you need for a full-body beach workout in one kit. Compact enough to throw in a bag, durable enough to survive sand and salt air. One of the highest-rated band sets on Amazon for good reason.</div>
+        <div class="featured-product-price">~$30</div>
+        <a href="https://www.amazon.com/s?k=WHATAFIT+resistance+bands+set&tag=rendezblu-20" class="featured-product-cta" target="_blank" rel="nofollow">Check price on Amazon →</a>
+      </div>
+    </div>
+
+    <div class="cat-guides-title">Guides & Reviews</div>
+    <div class="coming-soon">
+      <div class="coming-soon-text">Guides dropping soon</div>
+      <div class="coming-soon-sub">Best beach workout kits under $200, portable sandbag reviews, resistance band setups — all coming.</div>
+    </div>
+  </div>
+
+  <footer class="footer-wrap">
+    <div class="footer container">
+      <div class="footer-left">
+        <div class="footer-logo">Rendez<span class="footer-logo-blu">Blu</span></div>
+        <div class="footer-tagline">where blu meets blu.</div>
+      </div>
+      <div class="footer-right">© 2026 RendezBlu</div>
+    </div>
+  </footer>
+</body>
+</html>
