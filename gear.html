@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop Gear — RendezBlu</title>
+  <meta name="description" content="Curated water sports and beach lifestyle gear. Honest reviews, real affiliate links. SUP, surfboards, efoils, kayaks, and more." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,22 +14,22 @@
     .page-hero { background: var(--navy); padding: 5rem 2rem 3rem; text-align: center; }
     .page-hero-title { font-family: var(--display); font-size: clamp(48px, 8vw, 80px); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; color: #fff; margin-bottom: 0.75rem; }
     .page-hero-sub { font-family: var(--body); font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.6); margin-bottom: 2rem; }
-    .search-wrap { max-width: 560px; margin: 0 auto; position: relative; }
-    .search-input { width: 100%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; padding: 14px 24px; font-family: var(--body); font-size: 15px; color: #fff; outline: none; }
+    .search-wrap { max-width: 560px; margin: 0 auto; }
+    .search-input { width: 100%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; padding: 14px 24px; font-family: var(--body); font-size: 15px; color: #fff; outline: none; box-sizing: border-box; }
     .search-input::placeholder { color: rgba(255,255,255,0.4); }
-    .search-input:focus { border-color: var(--sky); background: rgba(255,255,255,0.15); }
+    .search-input:focus { border-color: var(--sky); }
     .page-body { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 5rem; }
-    .gear-section { margin-bottom: 4rem; }
-    .gear-section-title { font-family: var(--display); font-size: 28px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; color: var(--navy); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--ocean); display: inline-block; }
-    .gear-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+    .gear-section { margin-bottom: 3.5rem; }
+    .gear-section-title { font-family: var(--display); font-size: 26px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; color: var(--navy); margin-bottom: 1.25rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--ocean); display: inline-block; }
+    .gear-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
     .gear-card { background: #fff; border: 1px solid var(--card-border); border-radius: 14px; overflow: hidden; transition: border-color 0.2s, transform 0.15s; display: block; text-decoration: none; }
     .gear-card:hover { border-color: var(--ocean); transform: translateY(-2px); }
-    .gear-card-img { height: 180px; background-size: cover; background-position: center; }
-    .gear-card-body { padding: 1.25rem; }
-    .gear-card-tag { font-family: 'Courier New', monospace; font-size: 10px; color: var(--ocean); letter-spacing: 0.12em; margin-bottom: 0.4rem; }
-    .gear-card-name { font-family: var(--display); font-size: 17px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.25rem; line-height: 1.2; }
-    .gear-card-price { font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--ocean); margin-bottom: 0.75rem; }
-    .gear-card-cta { font-family: var(--display); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ocean); }
+    .gear-card-img { height: 170px; background-size: cover; background-position: center; }
+    .gear-card-body { padding: 1.1rem 1.25rem; }
+    .gear-card-tag { font-family: 'Courier New', monospace; font-size: 10px; color: var(--ocean); letter-spacing: 0.12em; margin-bottom: 0.35rem; }
+    .gear-card-name { font-family: var(--display); font-size: 16px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.2rem; line-height: 1.2; letter-spacing: 0.01em; }
+    .gear-card-price { font-family: var(--display); font-size: 15px; font-weight: 700; color: var(--ocean); margin-bottom: 0.6rem; }
+    .gear-card-cta { font-family: var(--display); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ocean); }
     .no-results { text-align: center; padding: 4rem; color: var(--hint); font-family: var(--body); display: none; }
     .no-results-title { font-family: var(--display); font-size: 24px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 0.5rem; }
     @media (max-width: 768px) { .gear-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
@@ -36,6 +37,7 @@
   </style>
 </head>
 <body>
+
   <header class="sticky-nav" id="mainNav">
     <a href="/" class="sticky-logo">Rendez<span>Blu</span></a>
     <div class="nav-right">
@@ -48,7 +50,7 @@
     <div class="page-hero-title">Shop Gear</div>
     <div class="page-hero-sub">Curated water gear. Honest reviews. Real affiliate links.</div>
     <div class="search-wrap">
-      <input type="text" class="search-input" id="gearSearch" placeholder="Search gear — paddleboards, dry bags, watches..." />
+      <input type="text" class="search-input" id="gearSearch" placeholder="Search gear — paddleboards, efoils, wetsuits..." />
     </div>
   </div>
 
@@ -58,128 +60,151 @@
       <div>Try a different search term</div>
     </div>
 
+    <!-- PADDLEBOARDS & SUP -->
     <div class="gear-section" data-section="paddleboards">
       <div class="gear-section-title">Paddleboards & SUP</div>
       <div class="gear-grid">
-        <a href="/guides/best-inflatable-paddleboards-under-500.html" class="gear-card" data-name="irocker cruiser paddleboard sup inflatable">
-          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/6964901/pexels-photo-6964901.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-          <div class="gear-card-body">
-            <div class="gear-card-tag">// paddleboards</div>
-            <div class="gear-card-name">iROCKER Cruiser 7.0</div>
-            <div class="gear-card-price">~$499</div>
-            <div class="gear-card-cta">View review →</div>
-          </div>
+        <a href="/guides/best-inflatable-paddleboards-under-500.html" class="gear-card" data-name="irocker cruiser paddleboard sup inflatable beginner">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/6964901/pexels-photo-6964901.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// paddleboards</div><div class="gear-card-name">iROCKER Cruiser 7.0</div><div class="gear-card-price">~$499</div><div class="gear-card-cta">View review →</div></div>
         </a>
-        <a href="/guides/best-inflatable-paddleboards-under-500.html" class="gear-card" data-name="roc paddleboard sup inflatable beginner">
-          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/1295036/pexels-photo-1295036.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-          <div class="gear-card-body">
-            <div class="gear-card-tag">// paddleboards</div>
-            <div class="gear-card-name">ROC Inflatable SUP</div>
-            <div class="gear-card-price">~$299–349</div>
-            <div class="gear-card-cta">View review →</div>
-          </div>
+        <a href="/guides/best-inflatable-paddleboards-under-500.html" class="gear-card" data-name="roc sup inflatable paddleboard beginner">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/1295036/pexels-photo-1295036.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// paddleboards</div><div class="gear-card-name">ROC Inflatable SUP</div><div class="gear-card-price">~$299–349</div><div class="gear-card-cta">View review →</div></div>
         </a>
-        <a href="/guides/best-inflatable-paddleboards-under-500.html" class="gear-card" data-name="retrospec weekender kayak combo sup paddleboard">
-          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/4784917/pexels-photo-4784917.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-          <div class="gear-card-body">
-            <div class="gear-card-tag">// paddleboards</div>
-            <div class="gear-card-name">Retrospec Weekender Plus</div>
-            <div class="gear-card-price">~$349–399</div>
-            <div class="gear-card-cta">View review →</div>
-          </div>
+        <a href="/guides/best-inflatable-fishing-sups-2026.html" class="gear-card" data-name="bote rackham fishing sup paddleboard angler">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/4784917/pexels-photo-4784917.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// fishing SUP</div><div class="gear-card-name">BOTE Rackham Aero Fishing SUP</div><div class="gear-card-price">~$1,300</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-sup-yoga-gear.html" class="gear-card" data-name="sup yoga paddle board wide stable thurso">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// SUP yoga</div><div class="gear-card-name">Thurso Surf Tranquility Yoga SUP</div><div class="gear-card-price">~$699–799</div><div class="gear-card-cta">View guide →</div></div>
         </a>
       </div>
     </div>
 
-    <div class="gear-section" data-section="beach-workout">
-      <div class="gear-section-title">Beach Workout Gear</div>
+    <!-- ELECTRIC & PREMIUM -->
+    <div class="gear-section" data-section="electric">
+      <div class="gear-section-title">Electric & Premium</div>
       <div class="gear-grid">
-        <a href="https://www.amazon.com/s?k=WHATAFIT+resistance+bands+set&tag=rendezblu-20" class="gear-card" data-name="resistance bands workout beach fitness" target="_blank" rel="nofollow">
-          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/8544754/pexels-photo-8544754.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-          <div class="gear-card-body">
-            <div class="gear-card-tag">// beach workout</div>
-            <div class="gear-card-name">WHATAFIT Resistance Bands Set</div>
-            <div class="gear-card-price">~$30</div>
-            <div class="gear-card-cta">Buy on Amazon →</div>
-          </div>
+        <a href="/guides/waydoo-flyer-one-plus-efoil-review-2026.html" class="gear-card" data-name="waydoo efoil electric hydrofoil flyer one plus">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/20224351/pexels-photo-20224351.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// efoil</div><div class="gear-card-name">Waydoo Flyer ONE Plus eFoil</div><div class="gear-card-price">~$5,800</div><div class="gear-card-cta">View review →</div></div>
         </a>
-        <a href="/guides/beach-gym-setup-under-200.html" class="gear-card" data-name="beach gym setup workout fitness outdoor">
-          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-          <div class="gear-card-body">
-            <div class="gear-card-tag">// beach workout</div>
-            <div class="gear-card-name">Complete Beach Gym Under $200</div>
-            <div class="gear-card-price">Full guide</div>
-            <div class="gear-card-cta">Read guide →</div>
-          </div>
+        <a href="/guides/best-efoils-2026.html" class="gear-card" data-name="lift efoil electric hydrofoil premium">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/28830210/pexels-photo-28830210.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// efoil</div><div class="gear-card-name">Lift LIFT5 eFoil</div><div class="gear-card-price">From $12,995</div><div class="gear-card-cta">View guide →</div></div>
+        </a>
+        <a href="/guides/flyboard-hydroflight-gear-guide.html" class="gear-card" data-name="zapata flyboard hydroflight jetpack hoverboard">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/13386034/pexels-photo-13386034.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// hydroflight</div><div class="gear-card-name">Zapata Flyboard Pro Series</div><div class="gear-card-price">~$5,000–6,500</div><div class="gear-card-cta">View guide →</div></div>
         </a>
       </div>
     </div>
 
-    <div class="gear-section" data-section="waterproof">
-      <div class="gear-section-title">Waterproof Essentials</div>
+    <!-- SURFING -->
+    <div class="gear-section" data-section="surfing">
+      <div class="gear-section-title">Surfing</div>
       <div class="gear-grid">
-        <a href="https://www.amazon.com/Earth-Pak-Waterproof-Dry-Bag/dp/B0BBBWR2H6?tag=rendezblu-20" class="gear-card" data-name="earth pak dry bag waterproof kayak" target="_blank" rel="nofollow">
-          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/8481976/pexels-photo-8481976.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-          <div class="gear-card-body">
-            <div class="gear-card-tag">// waterproof</div>
-            <div class="gear-card-name">Earth Pak Waterproof Dry Bag</div>
-            <div class="gear-card-price">~$35</div>
-            <div class="gear-card-cta">Buy on Amazon →</div>
-          </div>
+        <a href="/guides/best-surfboards-for-beginners.html" class="gear-card" data-name="wavestorm surfboard beginner soft top">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/5007157/pexels-photo-5007157.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// surfboards</div><div class="gear-card-name">Wavestorm 8' Classic</div><div class="gear-card-price">~$149–199</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-wetsuits-for-beginners-under-150.html" class="gear-card" data-name="oneill reactor wetsuit beginner surf sup">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/19532133/pexels-photo-19532133.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// wetsuits</div><div class="gear-card-name">O'Neill Reactor-2 3/2mm</div><div class="gear-card-price">~$99–129</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-rash-guards-men-women.html" class="gear-card" data-name="rash guard upf sun protection surf oneill hurley">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/1654485/pexels-photo-1654485.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// rash guards</div><div class="gear-card-name">O'Neill Basic Skins UPF 50+</div><div class="gear-card-price">~$29–49</div><div class="gear-card-cta">View review →</div></div>
         </a>
       </div>
     </div>
 
+    <!-- KAYAKING -->
+    <div class="gear-section" data-section="kayaking">
+      <div class="gear-section-title">Kayaking</div>
+      <div class="gear-grid">
+        <a href="/guides/best-transparent-inflatable-kayaks-2026.html" class="gear-card" data-name="transparent kayak glass bottom viral inflatable">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// trending · kayaks</div><div class="gear-card-name">AKTIVETY Transparent Kayak</div><div class="gear-card-price">~$650</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-inflatable-kayaks-under-500.html" class="gear-card" data-name="driftsun rover inflatable kayak under 500">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// kayaks</div><div class="gear-card-name">Driftsun Rover 120</div><div class="gear-card-price">~$399–499</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-kayak-paddles-under-100.html" class="gear-card" data-name="bending branches kayak paddle under 100">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// paddles</div><div class="gear-card-name">Bending Branches Whisper Paddle</div><div class="gear-card-price">~$79–99</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- BEACH FITNESS & WELLNESS -->
+    <div class="gear-section" data-section="beach-fitness">
+      <div class="gear-section-title">Beach Fitness & Wellness</div>
+      <div class="gear-grid">
+        <a href="/guides/beach-gym-setup-under-200.html" class="gear-card" data-name="whatafit resistance bands beach workout fitness">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/8544754/pexels-photo-8544754.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// beach fitness</div><div class="gear-card-name">WHATAFIT Resistance Bands Set</div><div class="gear-card-price">~$30</div><div class="gear-card-cta">View guide →</div></div>
+        </a>
+        <a href="/guides/best-wood-grain-inflatable-ice-baths.html" class="gear-card" data-name="aksport wood grain ice bath cold plunge inflatable backyard">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/1430672/pexels-photo-1430672.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// wellness · trending</div><div class="gear-card-name">AKSPORT Wood Grain Ice Bath</div><div class="gear-card-price">~$340</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-aquatic-resistance-gear-ocean-workouts.html" class="gear-card" data-name="speedo aqua gloves finis parachute aquatic resistance ocean workout">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// beach fitness</div><div class="gear-card-name">Speedo Aqua Fit Training Gloves</div><div class="gear-card-price">~$25</div><div class="gear-card-cta">View guide →</div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- TECH & ACCESSORIES -->
     <div class="gear-section" data-section="tech">
-      <div class="gear-section-title">Ocean Fitness Tech</div>
+      <div class="gear-section-title">Tech & Accessories</div>
       <div class="gear-grid">
-        <a href="https://www.amazon.com/Garmin-Instinct-Charging-Capabilities-Multi-GNSS/dp/B09NMKGRMZ?tag=rendezblu-20" class="gear-card" data-name="garmin instinct solar gps watch waterproof ocean fitness" target="_blank" rel="nofollow">
-          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/4908545/pexels-photo-4908545.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-          <div class="gear-card-body">
-            <div class="gear-card-tag">// tech</div>
-            <div class="gear-card-name">Garmin Instinct 2 Solar</div>
-            <div class="gear-card-price">~$299</div>
-            <div class="gear-card-cta">Buy on Amazon →</div>
-          </div>
+        <a href="/guides/best-waterproof-fitness-trackers.html" class="gear-card" data-name="garmin instinct solar watch waterproof gps fitness tracker">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/4908545/pexels-photo-4908545.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// tech</div><div class="gear-card-name">Garmin Instinct 2 Solar</div><div class="gear-card-price">~$299</div><div class="gear-card-cta">View review →</div></div>
         </a>
-        <a href="/guides/best-waterproof-fitness-trackers.html" class="gear-card" data-name="waterproof fitness tracker watch ocean swimming">
-          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-          <div class="gear-card-body">
-            <div class="gear-card-tag">// tech</div>
-            <div class="gear-card-name">Best Waterproof Fitness Trackers</div>
-            <div class="gear-card-price">Full guide</div>
-            <div class="gear-card-cta">Read guide →</div>
-          </div>
+        <a href="/guides/best-underwater-cameras-action-cams.html" class="gear-card" data-name="gopro hero 13 action camera waterproof underwater">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/9550550/pexels-photo-9550550.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// cameras</div><div class="gear-card-name">GoPro Hero 13 Black</div><div class="gear-card-price">~$399</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-waterproof-bone-conduction-headphones-swimming.html" class="gear-card" data-name="shokz openswim pro bone conduction headphones swimming waterproof">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// audio</div><div class="gear-card-name">Shokz OpenSwim Pro</div><div class="gear-card-price">~$140</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-waterproof-bluetooth-speakers-beach.html" class="gear-card" data-name="jbl charge 6 waterproof bluetooth speaker beach">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/2894648/pexels-photo-2894648.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// speakers</div><div class="gear-card-name">JBL Charge 6</div><div class="gear-card-price">~$149–179</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-life-jackets-pfds-water-sports.html" class="gear-card" data-name="onyx movevent pfd life jacket paddling kayak sup">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/7426178/pexels-photo-7426178.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// safety</div><div class="gear-card-name">Onyx MoveVent Dynamic PFD</div><div class="gear-card-price">~$69–89</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-waterproof-fitness-trackers.html" class="gear-card" data-name="earth pak dry bag waterproof kayak sup ocean">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/8481976/pexels-photo-8481976.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// waterproof</div><div class="gear-card-name">Earth Pak Waterproof Dry Bag</div><div class="gear-card-price">~$35</div><div class="gear-card-cta">View review →</div></div>
         </a>
       </div>
     </div>
 
-    <div class="gear-section" data-section="water-sports">
-      <div class="gear-section-title">Water Sports</div>
-      <div class="gear-grid">
-        <a href="/gear/water-sports.html" class="gear-card" data-name="kitesurfing kite surfing water sports">
-          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/28830210/pexels-photo-28830210.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-          <div class="gear-card-body">
-            <div class="gear-card-tag">// water sports</div>
-            <div class="gear-card-name">Water Sports Gear Guide</div>
-            <div class="gear-card-price">Browse all</div>
-            <div class="gear-card-cta">Explore →</div>
-          </div>
-        </a>
-      </div>
-    </div>
-
+    <!-- CARRY & TRANSPORT -->
     <div class="gear-section" data-section="carry">
       <div class="gear-section-title">Carry & Transport</div>
       <div class="gear-grid">
-        <a href="https://www.amazon.com/Suspenz-Single-Up-Airless-SUP-Cart/dp/B07B3NQVKR?tag=rendezblu-20" class="gear-card" data-name="suspenz sup cart paddleboard transport carry wheels" target="_blank" rel="nofollow">
-          <div class="gear-card-img" style="background-image: url('https://images.pexels.com/photos/7276610/pexels-photo-7276610.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-          <div class="gear-card-body">
-            <div class="gear-card-tag">// carry & transport</div>
-            <div class="gear-card-name">Suspenz Single-Up SUP Cart</div>
-            <div class="gear-card-price">~$89</div>
-            <div class="gear-card-cta">Buy on Amazon →</div>
-          </div>
+        <a href="/guides/best-roof-racks-paddleboards-surfboards.html" class="gear-card" data-name="yakima supdawg roof rack paddleboard surfboard transport">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/7276610/pexels-photo-7276610.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// roof racks</div><div class="gear-card-name">Yakima SUPDawg Roof Rack</div><div class="gear-card-price">~$249</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/guides/best-coolers-beach-boating.html" class="gear-card" data-name="yeti roadie cooler beach boating ice retention">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// coolers</div><div class="gear-card-name">YETI Roadie 24</div><div class="gear-card-price">~$249–299</div><div class="gear-card-cta">View review →</div></div>
+        </a>
+        <a href="/gear/carry.html" class="gear-card" data-name="suspenz sup cart paddleboard transport carry wheels airless">
+          <div class="gear-card-img" style="background-image:url('https://images.pexels.com/photos/5231592/pexels-photo-5231592.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+          <div class="gear-card-body"><div class="gear-card-tag">// carts</div><div class="gear-card-name">Suspenz Single-Up SUP Cart</div><div class="gear-card-price">~$89</div><div class="gear-card-cta">View gear →</div></div>
         </a>
       </div>
     </div>
@@ -191,11 +216,17 @@
         <div class="footer-logo">Rendez<span class="footer-logo-blu">Blu</span></div>
         <div class="footer-tagline">where blu meets blu.</div>
       </div>
-      <div class="footer-right"><a href="/contact.html" style="font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--ocean);color:#fff;padding:7px 16px;border-radius:100px;text-decoration:none;margin-right:1rem;">Contact</a>© 2026 RendezBlu</div>
+      <div class="footer-right">
+        <a href="/contact.html" style="font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--ocean);color:#fff;padding:7px 16px;border-radius:100px;text-decoration:none;margin-right:1rem;">Contact</a>
+        © 2026 RendezBlu
+      </div>
     </div>
   </footer>
 
   <script>
+    const nav = document.getElementById('mainNav');
+    if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
     const searchInput = document.getElementById('gearSearch');
     const cards = document.querySelectorAll('.gear-card');
     const sections = document.querySelectorAll('.gear-section');
@@ -204,29 +235,18 @@
     searchInput.addEventListener('input', function() {
       const q = this.value.toLowerCase().trim();
       let anyVisible = false;
-
       cards.forEach(card => {
-        const name = card.dataset.name || '';
+        const name = (card.dataset.name || '').toLowerCase();
         const visible = !q || name.includes(q);
         card.style.display = visible ? '' : 'none';
         if (visible) anyVisible = true;
       });
-
       sections.forEach(section => {
         const visibleCards = [...section.querySelectorAll('.gear-card')].some(c => c.style.display !== 'none');
         section.style.display = visibleCards ? '' : 'none';
       });
-
       noResults.style.display = anyVisible ? 'none' : 'block';
     });
-  </script>
-  <script>
-    const nav = document.getElementById('mainNav');
-    if (nav) {
-      window.addEventListener('scroll', () => {
-        nav.classList.toggle('scrolled', window.scrollY > 60);
-      });
-    }
   </script>
 </body>
 </html>
